@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Host Dashboard — Quiz Battle</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="host" data-role="host">
+  <header class="topbar">
+    <div class="logo small">Quiz <span>Battle</span></div>
+    <div class="topbar-meta" id="topbarMeta">Host Dashboard</div>
+  </header>
+
+  <!-- ============ CREATE VIEW ============ -->
+  <section class="view" id="view-create">
+    <div class="panel create-panel">
+      <h2>Create a Quiz</h2>
+      <label for="hostName">Your name</label>
+      <input id="hostName" type="text" maxlength="24" placeholder="e.g. Professor X" />
+      <label for="categorySelect">Category</label>
+      <select id="categorySelect"></select>
+      <p class="hint">Pick a category — the engine shuffles up to 5 questions, 15s each.</p>
+      <button id="btnCreateQuiz" class="btn-primary">Create Quiz</button>
+      <p class="err hidden" id="createErr"></p>
+    </div>
+  </section>
+
+  <!-- ============ LOBBY VIEW ============ -->
+  <section class="view hidden" id="view-lobby">
+    <div class="lobby-grid">
+      <div class="panel lobby-pin-panel">
+        <p class="muted">Share this PIN with players</p>
+        <div class="pin-display" id="pinDisplay">----</div>
+        <p class="muted" id="lobbyCategory"></p>
+      </div>
+      <div class="panel lobby-list-panel">
+        <h3>Players <span class="count-badge" id="playerCount">0</span></h3>
+        <ul class="roster" id="rosterHost"></ul>
+        <button id="btnStartGame" class="btn-primary" disabled>Start Game</button>
+        <p class="err hidden" id="startErr"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GAME VIEW ============ -->
+  <section class="view hidden" id="view-game">
+    <div class="game-layout">
+      <div class="stage">
+        <div class="stage-top">
+          <div class="qchip" id="qCounter">Q 1 / 5</div>
+          <div class="round-ticker" id="roundTicker">0/0 answered</div>
+        </div>
+        <div class="question-card">
+          <div class="timer-zone">
+            <svg class="timer-svg" viewBox="0 0 120 120">
+              <circle class="timer-bg" cx="60" cy="60" r="52"></circle>
+              <circle class="timer-fg" id="timerFg" cx="60" cy="60" r="52"></circle>
+            </svg>
+            <div class="timer-num" id="timerNum">15</div>
+          </div>
+          <h2 class="question-text" id="hostQuestion">Waiting for the quiz to start…</h2>
+        </div>
+        <div class="options-grid" id="hostOptions"></div>
+        <div class="reveal hidden" id="revealBox">
+          <p class="reveal-title">Correct answer</p>
+          <p class="reveal-answer" id="revealAnswer"></p>
+          <div class="dist-bars" id="distBars"></div>
+          <p class="reveal-expl" id="revealExpl"></p>
+        </div>
+      </div>
+      <aside class="leader-panel">
+        <h3>Live Leaderboard</h3>
+        <ol class="leaderboard" id="hostLeaderboard"></ol>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ RESULTS VIEW ============ -->
+  <section class="view hidden" id="view-results">
+    <div class="panel results-panel">
+      <h2 class="results-title">🏆 Game Over</h2>
+      <div class="winner" id="winnerBox"></div>
+      <ol class="leaderboard final" id="finalRanks"></ol>
+      <a class="btn-secondary" href="host.html">Create another quiz</a>
+    </div>
+  </section>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

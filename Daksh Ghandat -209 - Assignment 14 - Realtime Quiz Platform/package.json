@@ -1,0 +1,35 @@
+{
+  "name": "assignment-14-quiz-socket",
+  "version": "1.0.0",
+  "description": "Real-Time Multiplayer Live Quiz Battle Arena built with Node.js, Express, Socket.io and MongoDB",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "socket.io",
+    "websocket",
+    "realtime",
+    "quiz",
+    "trivia",
+    "kahoot",
+    "game",
+    "leaderboard",
+    "express",
+    "mongodb"
+  ],
+  "author": "Daksh Ghandat",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.1",
+    "socket.io": "^4.7.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

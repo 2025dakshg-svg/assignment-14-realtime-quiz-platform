@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Player Pad — Quiz Battle</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="player" data-role="player">
+  <header class="topbar player-top">
+    <div class="logo small">Quiz <span>Battle</span></div>
+    <div class="topbar-meta" id="playerTopMeta">Join a game</div>
+  </header>
+
+  <!-- ============ JOIN VIEW ============ -->
+  <section class="view" id="view-join">
+    <div class="panel create-panel join-panel">
+      <h2>Join the battle</h2>
+      <label for="playerPin">Game PIN</label>
+      <input id="playerPin" type="text" inputmode="numeric" maxlength="4" placeholder="4-digit PIN" />
+      <label for="playerName">Your nickname</label>
+      <input id="playerName" type="text" maxlength="24" placeholder="e.g. Karan" />
+      <button id="btnJoin" class="btn-primary">Join Quiz</button>
+      <p class="err hidden" id="joinErr"></p>
+    </div>
+  </section>
+
+  <!-- ============ LOBBY WAIT VIEW ============ -->
+  <section class="view hidden" id="view-wait">
+    <div class="panel wait-panel">
+      <h2>You're in <span id="lobbyPinLabel"></span>!</h2>
+      <p class="muted" id="waitHost"></p>
+      <div class="wait-spinner"></div>
+      <p class="wait-text">Waiting for the host to start the quiz…</p>
+    </div>
+  </section>
+
+  <!-- ============ GAME VIEW ============ -->
+  <section class="view hidden" id="view-game">
+    <div class="player-game">
+      <div class="player-top-row">
+        <div class="qchip" id="playerQCounter">Q 1 / 5</div>
+        <div class="player-score-pill" id="playerScorePill">0 pts</div>
+        <div class="qchip timer-chip">
+          <span class="timer-num small" id="playerTimerNum">15</span>
+        </div>
+      </div>
+      <h2 class="question-text player" id="playerQuestion">Waiting…</h2>
+      <div class="answer-pad" id="answerPad"></div>
+      <div class="player-feedback hidden" id="playerFeedback"></div>
+      <div class="mini-leader hidden" id="miniLeader"></div>
+    </div>
+  </section>
+
+  <!-- ============ RESULTS VIEW ============ -->
+  <section class="view hidden" id="view-results">
+    <div class="panel results-panel">
+      <h2 class="results-title">🏆 Game Over</h2>
+      <div class="winner" id="playerWinner"></div>
+      <p class="muted" id="playerFinalScore"></p>
+      <ol class="leaderboard final" id="playerFinalRanks"></ol>
+      <button id="btnPlayAgain" class="btn-secondary">Play again</button>
+    </div>
+  </section>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

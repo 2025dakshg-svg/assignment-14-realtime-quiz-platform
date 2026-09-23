@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "category": "Tech",
+    "question": "What is the Node.js runtime built on?",
+    "options": ["V8 Engine", "SpiderMonkey", "ChakraCore", "JavaScriptCore"],
+    "correctOption": 0,
+    "explanation": "Node.js is built on Google Chrome's V8 JavaScript engine."
+  },
+  {
+    "id": 2,
+    "category": "Tech",
+    "question": "Which protocol does Socket.io use for low-latency real-time communication?",
+    "options": ["HTTP long polling", "WebSockets", "FTP", "SMTP"],
+    "correctOption": 1,
+    "explanation": "Socket.io uses WebSockets as its primary transport and falls back to HTTP long-polling."
+  },
+  {
+    "id": 3,
+    "category": "Tech",
+    "question": "Which command installs the socket.io package in a Node.js project?",
+    "options": ["npm remove socket.io", "npm install socket.io", "npm update express", "npm start socket.io"],
+    "correctOption": 1,
+    "explanation": "npm install socket.io adds the Socket.io client and server packages."
+  },
+  {
+    "id": 4,
+    "category": "Science",
+    "question": "What is the chemical symbol for gold?",
+    "options": ["Go", "Gd", "Au", "Ag"],
+    "correctOption": 2,
+    "explanation": "Au comes from the Latin word 'aurum', meaning gold."
+  },
+  {
+    "id": 5,
+    "category": "Science",
+    "question": "Which planet is known as the Red Planet?",
+    "options": ["Venus", "Mars", "Jupiter", "Saturn"],
+    "correctOption": 1,
+    "explanation": "Mars appears red because of iron oxide (rust) on its surface."
+  },
+  {
+    "id": 6,
+    "category": "Science",
+    "question": "What gas do plants absorb from the atmosphere during photosynthesis?",
+    "options": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"],
+    "correctOption": 2,
+    "explanation": "Plants take in carbon dioxide and release oxygen during photosynthesis."
+  },
+  {
+    "id": 7,
+    "category": "Sports",
+    "question": "How many players are on a standard cricket team?",
+    "options": ["9", "10", "11", "12"],
+    "correctOption": 2,
+    "explanation": "A cricket team fields 11 players, but only 2 batters are on the pitch at once."
+  },
+  {
+    "id": 8,
+    "category": "Geography",
+    "question": "Which is the longest river in the world?",
+    "options": ["Amazon", "Nile", "Yangtze", "Mississippi"],
+    "correctOption": 1,
+    "explanation": "The Nile is traditionally recognized as the longest river, about 6,650 km."
+  },
+  {
+    "id": 9,
+    "category": "General",
+    "question": "Which data structure works on the First-In-First-Out (FIFO) principle?",
+    "options": ["Stack", "Queue", "Tree", "Graph"],
+    "correctOption": 1,
+    "explanation": "A queue processes elements in the order they were added — FIFO."
+  },
+  {
+    "id": 10,
+    "category": "Tech",
+    "question": "In a quiz leaderboard, to rank players by score fairly, we should sort them in which order?",
+    "options": ["Ascending", "Random", "Descending", "Alphabetical"],
+    "correctOption": 2,
+    "explanation": "Descending order puts the highest score at rank 1."
+  },
+  {
+    "id": 11,
+    "category": "Movies",
+    "question": "Which studio produced the Toy Story franchise?",
+    "options": ["DreamWorks", "Pixar", "Illumination", "Blue Sky"],
+    "correctOption": 1,
+    "explanation": "Toy Story was the first feature film entirely made by Pixar Animation Studios."
+  },
+  {
+    "id": 12,
+    "category": "Science",
+    "question": "What is the powerhouse of the cell?",
+    "options": ["Nucleus", "Ribosome", "Mitochondria", "Golgi body"],
+    "correctOption": 2,
+    "explanation": "Mitochondria generate most of the cell's ATP energy."
+  }
+]
